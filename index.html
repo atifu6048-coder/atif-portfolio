@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Atif - Senior Full Stack Web Developer specializing in React, Node.js, Python, and scalable modern web architecture.">
+  <meta name="keywords" content="Atif, Full Stack Developer, Web Developer, React, Node.js, Python, MERN Stack, UI UX, Portfolio">
+  <meta name="author" content="Atif">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atif | Senior Full Stack Web Developer">
+  <meta property="og:description" content="Explore high-impact web applications, scalable backends, and modern glassmorphic designs crafted by Atif.">
+  
+  <title>Atif | Senior Full Stack Web Developer &amp; UI/UX Architect</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Background Canvas & Ambient Mesh Lights -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="bg-mesh-glow">
+    <div class="mesh-circle mesh-1"></div>
+    <div class="mesh-circle mesh-2"></div>
+    <div class="mesh-circle mesh-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+       1. NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <span class="brand-icon">A</span>
+        <span>Atif<span class="brand-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active" id="navLinkHome">Home</a></li>
+        <li><a href="#about" class="nav-link" id="navLinkAbout">About</a></li>
+        <li><a href="#skills" class="nav-link" id="navLinkSkills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="navLinkProjects">Projects</a></li>
+        <li><a href="#timeline" class="nav-link" id="navLinkJourney">Journey</a></li>
+        <li><a href="#services" class="nav-link" id="navLinkServices">Services</a></li>
+        <li><a href="#contact" class="nav-link" id="navLinkContact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-nav-cv open-cv-modal" id="btnNavResume">
+          <i class="fas fa-file-alt"></i> View CV
+        </button>
+        <a href="#contact" class="btn-nav-contact" id="btnNavHire">
+          Hire Me <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-indicator"></span>
+            Available for Freelance &amp; Full-Time Roles
+          </div>
+
+          <h2 class="hero-greeting">Hello, World! 👋 I am</h2>
+          <h1 class="hero-title">
+            <span class="gradient-text">Atif</span>
+          </h1>
+
+          <div class="hero-typed-wrapper">
+            <span id="typed-text">Full Stack Web Developer</span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            Passionate software engineer architecting robust, scalable web platforms and immersive digital experiences. Specializing in high-performance full-stack MERN, Python backends, and modern glassmorphic web design.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" id="btnHeroProjects">
+              Explore Projects <i class="fas fa-code-branch"></i>
+            </a>
+            <button class="btn-secondary open-cv-modal" id="btnHeroCv">
+              <i class="fas fa-download"></i> Download CV
+            </button>
+            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="btnHeroWhatsapp">
+              <i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-quick-stats">
+            <div class="quick-stat">
+              <h4>03+</h4>
+              <p>Years Experience</p>
+            </div>
+            <div class="quick-stat">
+              <h4>45+</h4>
+              <p>Projects Delivered</p>
+            </div>
+            <div class="quick-stat">
+              <h4>99.8%</h4>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Portrait with Rotating Glowing Rings and Floating Badges -->
+        <div class="hero-visual-wrapper">
+          <div class="portrait-glow-ring"></div>
+          
+          <!-- Floating interactive badges -->
+          <div class="float-tech-badge badge-react">
+            <i class="fab fa-react"></i> React 18 &amp; Next.js
+          </div>
+          <div class="float-tech-badge badge-node">
+            <i class="fab fa-node-js"></i> Node.js &amp; Express
+          </div>
+          <div class="float-tech-badge badge-python">
+            <i class="fab fa-python"></i> Python &amp; FastAPI
+          </div>
+
+          <div class="portrait-card">
+            <div class="portrait-inner">
+              <img src="assets/images/atif-portrait.jpg" alt="Atif - Full Stack Web Developer" id="heroPortraitImg">
+              <div class="portrait-overlay-badge">
+                <div class="badge-info">
+                  <h5>Atif</h5>
+                  <span>Full Stack Architect</span>
+                </div>
+                <div class="badge-code-icon">
+                  <i class="fas fa-terminal"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT SECTION
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Discovery</span>
+          <h2 class="section-title">Engineering <span class="gradient-text">Clean Code</span> &amp; Modern Experiences</h2>
+          <p class="section-subtitle">Bridging the gap between complex engineering challenges and elegant, human-centric digital interfaces.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Glass Card with Code Mock & Counters -->
+          <div class="about-glass-card">
+            <div class="about-code-block">
+              <div class="code-header">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+                <small style="color: #64748b; margin-left: 0.5rem;">engineer_profile.js</small>
+              </div>
+              <div class="code-content">
+                <p><span class="code-keyword">const</span> <span class="code-prop">developer</span> = {</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">name</span>: <span class="code-string">'Atif'</span>,</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">role</span>: <span class="code-string">'Senior Full Stack Developer'</span>,</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">coreStack</span>: [<span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'Python'</span>, <span class="code-string">'MongoDB'</span>],</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">focus</span>: <span class="code-string">'Scalable Microservices &amp; Glassmorphism'</span>,</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">cleanArchitecture</span>: <span class="code-bool">true</span>,</p>
+                <p>&nbsp;&nbsp;<span class="code-prop">alwaysLearning</span>: <span class="code-bool">true</span></p>
+                <p>};</p>
+              </div>
+            </div>
+
+            <div class="about-counters">
+              <div class="counter-item">
+                <div class="counter-num" data-target="3" data-suffix="+">0</div>
+                <div class="counter-label">Years of Professional Dev</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" data-target="45" data-suffix="+">0</div>
+                <div class="counter-label">Completed Web Apps</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" data-target="15" data-suffix="+">0</div>
+                <div class="counter-label">Enterprise &amp; Global Clients</div>
+              </div>
+              <div class="counter-item">
+                <div class="counter-num" data-target="250" data-suffix="k+">0</div>
+                <div class="counter-label">Lines of Clean Code Written</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Narrative & Interactive Tabs -->
+          <div class="about-narrative">
+            <div class="about-content-tabs">
+              <button class="tab-btn active" data-tab="story" id="tabStory">My Background</button>
+              <button class="tab-btn" data-tab="philosophy" id="tabPhilosophy">Philosophy</button>
+              <button class="tab-btn" data-tab="workflow" id="tabWorkflow">Workflow &amp; Quality</button>
+            </div>
+
+            <div class="tab-pane active" id="tab-story">
+              <p>
+                I am a dedicated Full Stack Web Developer with a proven record of creating robust, user-delighting web applications. Over the past 3+ years, I have architected everything from high-traffic e-commerce systems to real-time AI dashboards.
+              </p>
+              <p>
+                My expertise spans the entire development lifecycle: crafting fluid UI components with modern JavaScript and React, engineering secure REST and WebSocket backends in Node.js and Python, and deploying scalable microservices on Docker and cloud platforms.
+              </p>
+            </div>
+
+            <div class="tab-pane" id="tab-philosophy">
+              <p>
+                I believe software must not only look breathtaking but run reliably under pressure. Code readability, DRY principles, and modular architecture are at the center of every project I engineer.
+              </p>
+              <p>
+                Every millisecond matters. From optimizing database indexing to caching and asynchronous job processing, I build applications that provide instant gratification to end users.
+              </p>
+            </div>
+
+            <div class="tab-pane" id="tab-workflow">
+              <p>
+                My process begins with in-depth requirements modeling, interactive component wireframing, and test-driven development. I ensure seamless collaboration with Git branches, automated CI/CD checks, and thorough code documentation.
+              </p>
+              <p>
+                Post-launch, I provide automated uptime telemetry, performance tuning, and ongoing support to ensure zero downtime and peak performance.
+              </p>
+            </div>
+
+            <ul class="about-highlights-list">
+              <li><i class="fas fa-check-circle"></i> Clean, Maintainable Code</li>
+              <li><i class="fas fa-check-circle"></i> Responsive Glassmorphic UI</li>
+              <li><i class="fas fa-check-circle"></i> Ultra-Fast API Latency</li>
+              <li><i class="fas fa-check-circle"></i> Secure Auth &amp; Data Encryption</li>
+              <li><i class="fas fa-check-circle"></i> Agile &amp; Transparent Delivery</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 Rapid Communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SKILLS & TECH STACK SECTION
+         ========================================================================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Arsenal</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills &amp; Expertise</span></h2>
+          <p class="section-subtitle">A modern, battle-tested stack honed to engineer production-ready, performant web platforms.</p>
+        </div>
+
+        <div class="skills-filter-nav">
+          <button class="filter-pill skill-filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-pill skill-filter-btn" data-filter="frontend">Frontend &amp; UI</button>
+          <button class="filter-pill skill-filter-btn" data-filter="backend">Backend &amp; APIs</button>
+          <button class="filter-pill skill-filter-btn" data-filter="cloud">Cloud &amp; Databases</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Skill Card 1 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-icon-wrap cyan"><i class="fab fa-react"></i></div>
+              <span class="skill-level-badge">95%</span>
+            </div>
+            <h4>React.js &amp; Next.js</h4>
+            <p>Component architecture, SSR, SSG, custom hooks, Redux Toolkit, React Query.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="95"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-icon-wrap yellow"><i class="fab fa-js-square"></i></div>
+              <span class="skill-level-badge">94%</span>
+            </div>
+            <h4>JavaScript &amp; TypeScript</h4>
+            <p>ES6+, strict typing, asynchronous programming, event loop, design patterns.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="94"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-top">
+              <div class="skill-icon-wrap green"><i class="fab fa-node-js"></i></div>
+              <span class="skill-level-badge">92%</span>
+            </div>
+            <h4>Node.js &amp; Express</h4>
+            <p>RESTful APIs, WebSocket pipelines, JWT authentication, rate limiting, middleware.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="92"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-top">
+              <div class="skill-icon-wrap purple"><i class="fab fa-python"></i></div>
+              <span class="skill-level-badge">88%</span>
+            </div>
+            <h4>Python &amp; FastAPI</h4>
+            <p>High-speed microservices, data analytics pipelines, background worker queues.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="88"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 5 -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div class="skill-icon-wrap green"><i class="fas fa-database"></i></div>
+              <span class="skill-level-badge">90%</span>
+            </div>
+            <h4>MongoDB &amp; PostgreSQL</h4>
+            <p>NoSQL aggregations, relational modeling, Prisma ORM, indexing and performance tuning.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="90"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 6 -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div class="skill-icon-wrap cyan"><i class="fab fa-docker"></i></div>
+              <span class="skill-level-badge">85%</span>
+            </div>
+            <h4>Docker &amp; Cloud (AWS)</h4>
+            <p>Containerization, multi-stage Dockerfiles, AWS S3/EC2, CI/CD automated deployments.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 7 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-top">
+              <div class="skill-icon-wrap purple"><i class="fab fa-css3-alt"></i></div>
+              <span class="skill-level-badge">96%</span>
+            </div>
+            <h4>Modern CSS &amp; Glassmorphism</h4>
+            <p>CSS Grid, Flexbox, keyframe animations, glassmorphism, responsive web layouts.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="96"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 8 -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-top">
+              <div class="skill-icon-wrap cyan"><i class="fab fa-git-alt"></i></div>
+              <span class="skill-level-badge">93%</span>
+            </div>
+            <h4>Git &amp; DevOps Workflows</h4>
+            <p>Version control, branch protection, GitHub Actions, code reviews, automated tests.</p>
+            <div class="skill-bar-outer">
+              <div class="skill-bar-fill" data-width="93"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. INTERACTIVE PROJECTS SHOWCASE (Requested User Feature)
+         ========================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Portfolio Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Engineering Projects</span></h2>
+          <p class="section-subtitle">Real-world production applications built with clean architecture, high scalability, and interactive UI.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar">
+          <button class="proj-filter-btn active" data-filter="all">All Projects</button>
+          <button class="proj-filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="proj-filter-btn" data-filter="saas">AI &amp; SaaS</button>
+          <button class="proj-filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="proj-filter-btn" data-filter="cloud">DevOps &amp; Cloud</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Aether Analytics AI -->
+          <article class="project-card" data-category="saas fullstack">
+            <div class="project-media">
+              <img src="assets/images/project-ai-dashboard.jpg" alt="Aether Analytics AI Dashboard Preview">
+              <div class="project-media-badges">
+                <span class="badge-featured">⭐ Featured</span>
+              </div>
+              <div class="project-media-overlay">
+                <button class="overlay-btn primary open-project-modal" data-project-id="ai-dashboard">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn secondary">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">AI &amp; SaaS / Full Stack</span>
+              <h3 class="project-title">Aether Analytics AI - Telemetry Suite</h3>
+              <p class="project-desc">
+                High-performance enterprise SaaS analytics platform with predictive user insights, real-time WebSocket telemetry, financial forecasting, and interactive dark charts.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">WebSockets</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-details open-project-modal" data-project-id="ai-dashboard">
+                  View Case Study <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="project-external-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Source on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon-link-btn open-project-modal" data-project-id="ai-dashboard" title="Live Preview">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Aether Tech Luxury E-Commerce -->
+          <article class="project-card" data-category="ecommerce fullstack">
+            <div class="project-media">
+              <img src="assets/images/project-ecommerce.jpg" alt="Aether Tech E-Commerce Platform Preview">
+              <div class="project-media-badges">
+                <span class="badge-featured">⚡ High Conversion</span>
+              </div>
+              <div class="project-media-overlay">
+                <button class="overlay-btn primary open-project-modal" data-project-id="ecommerce">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn secondary">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">E-Commerce / Full Stack</span>
+              <h3 class="project-title">Aether Tech - Smart Gadget Store</h3>
+              <p class="project-desc">
+                Luxury tech shopping platform engineered for lightning-speed checkouts. Features slide-over cart drawer, 3D secure Stripe checkout, and Redis caching.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-details open-project-modal" data-project-id="ecommerce">
+                  View Case Study <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="project-external-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Source on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon-link-btn open-project-modal" data-project-id="ecommerce" title="Live Preview">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: DevPulse Real-Time Workspace -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-media">
+              <img src="assets/images/project-cloud-chat.svg" alt="DevPulse Team Chat Preview">
+              <div class="project-media-badges">
+                <span class="badge-featured">🔥 Real-Time</span>
+              </div>
+              <div class="project-media-overlay">
+                <button class="overlay-btn primary open-project-modal" data-project-id="cloud-chat">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn secondary">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Full Stack / Real-Time</span>
+              <h3 class="project-title">DevPulse - Collaborative Workspace</h3>
+              <p class="project-desc">
+                Real-time developer team messenger with sub-15ms WebSocket pipeline, syntax-highlighted code snippets, channel organization, and WebRTC audio calls.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Socket.io</span>
+                <span class="tech-tag">WebRTC</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-details open-project-modal" data-project-id="cloud-chat">
+                  View Case Study <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="project-external-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Source on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon-link-btn open-project-modal" data-project-id="cloud-chat" title="Live Preview">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: CloudMatrix Kubernetes CI/CD Pipeline -->
+          <article class="project-card" data-category="cloud">
+            <div class="project-media">
+              <img src="assets/images/project-devops-pipeline.svg" alt="CloudMatrix DevOps Preview">
+              <div class="project-media-badges">
+                <span class="badge-featured">⚙️ DevOps Suite</span>
+              </div>
+              <div class="project-media-overlay">
+                <button class="overlay-btn primary open-project-modal" data-project-id="devops-pipeline">
+                  <i class="fas fa-eye"></i> Quick View
+                </button>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="overlay-btn secondary">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-tag">Cloud &amp; DevOps / Backend</span>
+              <h3 class="project-title">CloudMatrix - CI/CD Orchestrator</h3>
+              <p class="project-desc">
+                Container orchestrator dashboard visualizing Kubernetes pod deployments, automated GitHub Actions pipelines, edge ingress traffic, and zero-downtime releases.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes</span>
+                <span class="tech-tag">Python FastAPI</span>
+                <span class="tech-tag">Prometheus</span>
+                <span class="tech-tag">AWS</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn-details open-project-modal" data-project-id="devops-pipeline">
+                  View Case Study <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="project-external-links">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Source on GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon-link-btn open-project-modal" data-project-id="devops-pipeline" title="Live Preview">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. EXPERIENCE & EDUCATION TIMELINE
+         ========================================================================== -->
+    <section class="timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Career Path</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">A journey of continuous learning, leadership, and production software engineering.</p>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Experience Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-header">
+              <i class="fas fa-briefcase"></i> Work Experience
+            </h3>
+            <div class="timeline-flow">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2023 - Present</span>
+                  <h4>Senior Full Stack Developer</h4>
+                  <div class="timeline-company">TechSolutions Global Inc.</div>
+                  <p>
+                    Leading architecture on client SaaS products. Built MERN microservices that handled over 2 million monthly requests with 99.9% uptime. Mentored junior developers and instituted automated testing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2021 - 2023</span>
+                  <h4>Full Stack Web Developer</h4>
+                  <div class="timeline-company">InnoSoft Digital Labs</div>
+                  <p>
+                    Engineered dynamic React dashboards, RESTful APIs in Node.js, and PostgreSQL relational architectures. Reduced page load times by 40% using server caching and image optimization.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2020 - 2021</span>
+                  <h4>Frontend Developer &amp; UI Specialist</h4>
+                  <div class="timeline-company">PixelCraft Creative Studio</div>
+                  <p>
+                    Transformed Figma designs into responsive, accessible web interfaces using JavaScript, CSS3 animations, and React. Built reusable design system libraries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Certifications Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-header">
+              <i class="fas fa-graduation-cap"></i> Education &amp; Certifications
+            </h3>
+            <div class="timeline-flow">
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2017 - 2021</span>
+                  <h4>BS in Computer Science</h4>
+                  <div class="timeline-company">National University of Sciences &amp; Technology</div>
+                  <p>
+                    Graduated with honors. Key coursework: Data Structures, Algorithms, Distributed Computing, Database Management Systems, and Software Engineering Principles.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2023</span>
+                  <h4>AWS Certified Solutions Architect</h4>
+                  <div class="timeline-company">Amazon Web Services</div>
+                  <p>
+                    Validated competence in designing distributed systems, container orchestration, VPC networking, and cloud security architectures.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                  <span class="timeline-date">2022</span>
+                  <h4>Meta Full-Stack Professional Certificate</h4>
+                  <div class="timeline-company">Meta / Coursera</div>
+                  <p>
+                    Comprehensive mastery in React, advanced backend architecture, relational databases, and modern CI/CD deployment pipelines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. SERVICES SECTION
+         ========================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> What I Deliver</span>
+          <h2 class="section-title">Specialized <span class="gradient-text">Engineering Services</span></h2>
+          <p class="section-subtitle">Tailored digital solutions built from the ground up to empower startups and enterprises.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h4>Full-Stack Web Apps</h4>
+            <p>End-to-end custom web applications built with React, Next.js, Node.js, and MongoDB. Fast, responsive, and tailored to your business needs.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-server"></i>
+            </div>
+            <h4>API &amp; Backend Engineering</h4>
+            <p>High-throughput RESTful and GraphQL APIs engineered with Node.js and Python. Features automated documentation, caching, and rate limiting.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h4>E-Commerce Solutions</h4>
+            <p>Custom online stores with seamless Stripe/PayPal payment checkouts, dynamic inventory management, and fast customer experiences.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h4>Speed &amp; SEO Optimization</h4>
+            <p>Transform slow websites into sub-second powerhouses. Lighthouse 95+ scores, Core Web Vitals optimization, and clean semantic architecture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. TESTIMONIALS SECTION
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Social Proof</span>
+          <h2 class="section-title">What <span class="gradient-text">Clients &amp; Partners</span> Say</h2>
+          <p class="section-subtitle">Endorsements from founders and tech leads who have collaborated with Atif.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Atif delivered our SaaS dashboard 2 weeks ahead of deadline. The clean glassmorphic aesthetic blew our investors away, and his backend code runs effortlessly under heavy traffic!"
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">AR</div>
+              <div class="client-details">
+                <h5>Alex Reynolds</h5>
+                <span>Founder, Aether Analytics (USA)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Finding someone who understands both ultra-modern UI design and scalable database architecture is rare. Atif is a 10x engineer who took our e-commerce platform to the next level."
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">SK</div>
+              <div class="client-details">
+                <h5>Sara Khan</h5>
+                <span>CTO, Nexus Brands (UK)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">
+                "Superb communication, fast delivery, and spotless code. Atif's attention to micro-animations and user experience is second to none. Highly recommended for any serious web project!"
+              </p>
+            </div>
+            <div class="client-profile">
+              <div class="client-avatar">MZ</div>
+              <div class="client-details">
+                <h5>Mohammad Zain</h5>
+                <span>Product Manager, CloudMatrix</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. CONTACT SECTION
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><span class="dot"></span> Let's Connect</span>
+          <h2 class="section-title">Start a <span class="gradient-text">Project Together</span></h2>
+          <p class="section-subtitle">Have a vision or an engineering challenge? Let's discuss how we can build something exceptional.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <h3>Get In Touch</h3>
+            <p>
+              I am available for freelance contracts, full-time engineering positions, and consulting. Send me a message or connect directly on WhatsApp!
+            </p>
+
+            <div class="contact-links-list">
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                <div class="method-text">
+                  <h5>Email Address</h5>
+                  <a href="mailto:atif.developer@example.com">atif.developer@example.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="method-text">
+                  <h5>WhatsApp Direct</h5>
+                  <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer">+92 300 1234567</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="method-text">
+                  <h5>Location</h5>
+                  <span style="color: #fff; font-weight: 600;">Pakistan (Available for Worldwide Remote)</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/923001234567?text=Hi%20Atif,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn" id="btnWhatsappDirect">
+              <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Quick Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Contact Form Glass -->
+          <div class="contact-form-glass">
+            <form id="contactForm">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="userName" class="form-label">Your Name *</label>
+                  <input type="text" id="userName" class="form-input" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail" class="form-label">Your Email *</label>
+                  <input type="email" id="userEmail" class="form-input" placeholder="e.g. john@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="projectType" class="form-label">Project Type</label>
+                  <select id="projectType" class="form-select">
+                    <option value="Full-Stack Web App">Full-Stack Web App</option>
+                    <option value="SaaS / Dashboard">SaaS / Dashboard</option>
+                    <option value="E-Commerce Platform">E-Commerce Platform</option>
+                    <option value="Backend / API Development">Backend / API Development</option>
+                    <option value="UI/UX & Frontend Redesign">UI/UX &amp; Frontend Redesign</option>
+                    <option value="Other">Other Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="budgetRange" class="form-label">Estimated Budget</label>
+                  <select id="budgetRange" class="form-select">
+                    <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                    <option value="$3,000 - $7,000">$3,000 - $7,000</option>
+                    <option value="$7,000 - $15,000+">$7,000 - $15,000+</option>
+                    <option value="Full-Time Employment">Full-Time Employment</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Project Details / Message *</label>
+                <textarea id="userMessage" class="form-textarea" placeholder="Describe your project goals, timeline, or question..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-form" id="btnSubmitContact">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       10. INTERACTIVE PROJECT DETAILS MODAL (Requested User Feature)
+       ========================================================================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="modal-image-banner">
+        <img src="" alt="Project Preview Banner" id="modalImg">
+      </div>
+
+      <div class="modal-content">
+        <span class="modal-category" id="modalCategory">Category</span>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        <p class="modal-overview" id="modalOverview">Project overview content goes here.</p>
+
+        <h4 class="modal-feature-title">Key Architectural Features:</h4>
+        <ul class="modal-features-list" id="modalFeatures"></ul>
+
+        <div class="modal-tech-box">
+          <h4 style="font-family: var(--font-tech); font-size: 0.95rem; color: #fff; margin-bottom: 0.6rem;">Technologies Utilized:</h4>
+          <div class="project-tech-tags" id="modalTechStack"></div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" id="modalLiveLink">
+            <i class="fas fa-external-link-alt"></i> View Live Demo
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="modalCodeLink">
+            <i class="fab fa-github"></i> View GitHub Source
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       11. INTERACTIVE RESUME / CV MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+    <div class="modal-container" style="max-width: 780px;">
+      <button class="modal-close-btn" id="cvCloseBtn" aria-label="Close Resume Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="cv-modal-body">
+        <div class="cv-header-bar">
+          <div class="cv-candidate-info">
+            <h3 id="cvModalTitle">Atif</h3>
+            <p>Senior Full Stack Web Developer</p>
+            <small style="color: var(--text-muted);"><i class="fas fa-envelope"></i> atif.developer@example.com | <i class="fab fa-whatsapp"></i> +92 300 1234567 | Pakistan</small>
+          </div>
+          <div class="cv-download-actions">
+            <button class="btn-primary" id="printCvBtn" style="padding: 0.6rem 1.4rem; font-size: 0.9rem;">
+              <i class="fas fa-print"></i> Print / Save PDF
+            </button>
+          </div>
+        </div>
+
+        <div class="cv-section-block">
+          <h4>Professional Summary</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
+            Results-driven Full Stack Web Developer with 3+ years of experience engineering scalable web applications. Proficient in React, Node.js, Python, PostgreSQL, and MongoDB. Proven track record in shipping clean, performant, and secure cloud software.
+          </p>
+        </div>
+
+        <div class="cv-section-block">
+          <h4>Core Competencies</h4>
+          <div class="project-tech-tags">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">Python (FastAPI)</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">WebSockets</span>
+            <span class="tech-tag">CI/CD Pipelines</span>
+            <span class="tech-tag">REST &amp; GraphQL</span>
+          </div>
+        </div>
+
+        <div class="cv-section-block">
+          <h4>Experience Highlights</h4>
+          <div style="margin-bottom: 1rem;">
+            <strong style="color: #fff;">Senior Full Stack Developer</strong> — TechSolutions Global (2023 - Present)
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Spearheaded MERN microservices, achieving 99.9% uptime for 2M+ monthly users.</p>
+          </div>
+          <div>
+            <strong style="color: #fff;">Full Stack Web Developer</strong> — InnoSoft Digital (2021 - 2023)
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Built responsive dashboards and Node.js APIs, cutting loading latency by 40%.</p>
+          </div>
+        </div>
+
+        <div class="cv-section-block">
+          <h4>Education</h4>
+          <strong style="color: #fff;">BS Computer Science</strong> — National University of Sciences &amp; Technology (2017 - 2021)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. INTERACTION TOAST NOTIFICATION
+       ========================================================================== -->
+  <div class="toast-notification" id="toastNotification" role="alert">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span id="toastMessage">Message sent successfully!</span>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ==========================================================================
+       13. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <span class="brand-icon">A</span>
+            <span>Atif<span class="brand-dot">.dev</span></span>
+          </div>
+          <p>
+            Crafting high-impact web software and modern glassmorphic web experiences with clean architecture and scalable code.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills &amp; Tech</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#timeline">Career Journey</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Social &amp; Code Links</h5>
+          <ul>
+            <li><a href="https://github.com/atifu6048-coder" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter / X</a></li>
+            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Direct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Atif. All rights reserved. Handcrafted with passion &amp; modern code.</p>
+        <p>Built with Vanilla HTML5, CSS3 Glassmorphism &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
