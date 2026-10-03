@@ -538,22 +538,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 11. CONTACT FORM SUBMISSION SIMULATION & TOAST NOTIFICATION
+  // 11. WEB3FORMS CONTACT FORM SUBMISSION & TOAST NOTIFICATION
   const contactForm = document.getElementById('contactForm');
   const toastNotification = document.getElementById('toastNotification');
   const toastMessage = document.getElementById('toastMessage');
 
-  function showToast(msg) {
+  function showToast(msg, isError = false) {
     if (!toastNotification) return;
     toastMessage.textContent = msg;
+    if (isError) {
+      toastNotification.style.borderColor = '#ef4444';
+      toastNotification.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(239, 68, 68, 0.3)';
+      const icon = toastNotification.querySelector('.toast-icon');
+      if (icon) {
+        icon.className = 'fas fa-exclamation-circle toast-icon';
+        icon.style.color = '#ef4444';
+      }
+    } else {
+      toastNotification.style.borderColor = 'var(--neon-green)';
+      toastNotification.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 157, 0.3)';
+      const icon = toastNotification.querySelector('.toast-icon');
+      if (icon) {
+        icon.className = 'fas fa-check-circle toast-icon';
+        icon.style.color = 'var(--neon-green)';
+      }
+    }
     toastNotification.classList.add('show');
     setTimeout(() => {
       toastNotification.classList.remove('show');
-    }, 4500);
+    }, 5000);
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -563,12 +580,28 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Message...';
 
-      setTimeout(() => {
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.status === 200 && data.success) {
+          contactForm.reset();
+          showToast('🎉 Thank you! Your message has been sent directly to Atif.');
+        } else {
+          showToast('⚠️ ' + (data.message || 'Submission failed. Please try again or reach out on WhatsApp.'), true);
+        }
+      } catch (err) {
+        showToast('⚠️ Network error. Please message directly on WhatsApp or email.', true);
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        contactForm.reset();
-        showToast('🎉 Message sent successfully! Atif will respond to you within 24 hours.');
-      }, 1200);
+      }
     });
   }
 });

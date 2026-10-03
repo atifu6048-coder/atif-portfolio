@@ -860,22 +860,28 @@
 
           <!-- Contact Form Glass -->
           <div class="contact-form-glass">
-            <form id="contactForm">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Web3Forms Access Key & Config -->
+              <input type="hidden" name="access_key" value="007a9f10-c48c-4ce9-81de-bdf0a8926a8f">
+              <input type="hidden" name="from_name" value="Atif Portfolio Visitor">
+              <input type="hidden" name="subject" value="New Project Inquiry - Atif.dev Portfolio">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
               <div class="form-group-row">
                 <div class="form-group">
                   <label for="userName" class="form-label">Your Name *</label>
-                  <input type="text" id="userName" class="form-input" placeholder="e.g. John Doe" required>
+                  <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. John Doe" required>
                 </div>
                 <div class="form-group">
                   <label for="userEmail" class="form-label">Your Email *</label>
-                  <input type="email" id="userEmail" class="form-input" placeholder="e.g. john@company.com" required>
+                  <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. john@company.com" required>
                 </div>
               </div>
 
               <div class="form-group-row">
                 <div class="form-group">
                   <label for="projectType" class="form-label">Project Type</label>
-                  <select id="projectType" class="form-select">
+                  <select id="projectType" name="project_type" class="form-select">
                     <option value="Full-Stack Web App">Full-Stack Web App</option>
                     <option value="SaaS / Dashboard">SaaS / Dashboard</option>
                     <option value="E-Commerce Platform">E-Commerce Platform</option>
@@ -886,7 +892,7 @@
                 </div>
                 <div class="form-group">
                   <label for="budgetRange" class="form-label">Estimated Budget</label>
-                  <select id="budgetRange" class="form-select">
+                  <select id="budgetRange" name="budget" class="form-select">
                     <option value="$1,000 - $3,000">$1,000 - $3,000</option>
                     <option value="$3,000 - $7,000">$3,000 - $7,000</option>
                     <option value="$7,000 - $15,000+">$7,000 - $15,000+</option>
@@ -897,7 +903,7 @@
 
               <div class="form-group">
                 <label for="userMessage" class="form-label">Project Details / Message *</label>
-                <textarea id="userMessage" class="form-textarea" placeholder="Describe your project goals, timeline, or question..." required></textarea>
+                <textarea id="userMessage" name="message" class="form-textarea" placeholder="Describe your project goals, timeline, or question..." required></textarea>
               </div>
 
               <button type="submit" class="btn-submit-form" id="btnSubmitContact">
